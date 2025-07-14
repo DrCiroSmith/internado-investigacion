@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  jupyter:
+    build: ./docker
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./data:/data
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=DrNemo
+      - MYSQL_PASSWORD=zeJFE6*etem$#J8RchYAt8c
+      - MYSQL_DATABASE=PredictorDeExodoncias
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=zeJFE6*etem$#J8RchYAt8c
+      - MYSQL_DATABASE=PredictorDeExodoncias
+      - MYSQL_USER=DrNemo
+      - MYSQL_PASSWORD=zeJFE6*etem$#J8RchYAt8c
+    volumes:
+      - ./mysql:/var/lib/mysql
