@@ -18,6 +18,23 @@ Ecosistema portátil y seguro para análisis clínico con Jupyter, Python 3.12, 
 
 ---
 
+## 📈 Flujograma para análisis y modelos ARIMA/SARIMA
+
+![Flujograma Modelos](https://raw.githubusercontent.com/DrCiroSmith/internado-investigacion/main/img/flujo-arima-sarima.png)
+
+1. **Explora y limpia los datos en Jupyter**
+2. **Separa los sheets de interés**
+3. **Normaliza y valida los datos**
+4. **Carga los datos limpios a MySQL**
+5. **Extrae los datos desde MySQL en Jupyter**
+6. **Realiza análisis exploratorio y visualización**
+7. **Prepara series temporales**
+8. **Entrena y evalúa modelos ARIMA/SARIMA**
+9. **Documenta resultados y guarda notebooks**
+10. **Sincroniza avances en GitHub**
+
+---
+
 ## 📚 Guía completa
 
 Consulta [GUÍA_USO.md](./GUÍA_USO.md) para el paso a paso detallado, ejemplos y recomendaciones.
@@ -31,6 +48,7 @@ Consulta [GUÍA_USO.md](./GUÍA_USO.md) para el paso a paso detallado, ejemplos 
 - Jupyter Notebooks
 - MySQL
 - GitHub
+- pandas, numpy, matplotlib, seaborn, openpyxl, mysql-connector-python, scikit-learn, statsmodels, xlrd, pmdarima
 
 ---
 
