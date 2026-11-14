@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  jupyter:
+    build: ./docker
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./data:/data
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=${MYSQL_USER:-researcher}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-clinical_dev_password}
+      - MYSQL_DATABASE=${MYSQL_DATABASE:-clinical_research_db}
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-clinical_root_password}
+      - MYSQL_DATABASE=${MYSQL_DATABASE:-clinical_research_db}
+      - MYSQL_USER=${MYSQL_USER:-researcher}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-clinical_dev_password}
+    volumes:
+      - ./mysql:/var/lib/mysql
