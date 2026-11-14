@@ -1,0 +1,44 @@
+{
+  "dataset": {
+    "total_weeks": 156,
+    "months": 36,
+    "train_weeks": 136,
+    "test_weeks": 20,
+    "mean_weekly_caseload": 45.7,
+    "std_weekly_caseload": 8.5
+  },
+  "stationarity_adf": {
+    "adf_statistic": -3.195,
+    "p_value": 0.020278,
+    "is_stationary": true,
+    "critical_values": {
+      "1%": -3.48,
+      "5%": -2.89,
+      "10%": -2.58
+    }
+  },
+  "model_comparison": {
+    "naive_persistence": {
+      "rmse": 9.44,
+      "mae": 8.6,
+      "mape_pct": 23.09
+    },
+    "moving_average_4w": {
+      "rmse": 6.41,
+      "mae": 5.25,
+      "mape_pct": 14.44
+    },
+    "linear_drift": {
+      "rmse": 10.1,
+      "mae": 9.32,
+      "mape_pct": 24.94
+    },
+    "sarima_1_1_1_12": {
+      "rmse": 7.56,
+      "mae": 6.5,
+      "mape_pct": 17.7,
+      "aic": 738.27,
+      "bic": 749.48
+    }
+  }
+}

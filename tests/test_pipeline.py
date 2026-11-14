@@ -2,6 +2,7 @@
 Smoke and validation tests for the Clinical Research & Epidemiological Time-Series Platform.
 """
 import csv
+import json
 from pathlib import Path
 import sys
 import tempfile
@@ -73,3 +74,25 @@ def test_docker_compose_configuration():
     assert "mysql:" in content
     assert "8888:8888" in content
     assert "MYSQL_DATABASE" in content
+
+
+def test_sarima_benchmark_summary_structure():
+    summary_path = REPO_ROOT / "reports" / "sarima_benchmark_summary.json"
+    assert summary_path.exists(), "Benchmark summary JSON must exist"
+    
+    with open(summary_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+        
+    assert "dataset" in data
+    assert data["dataset"]["total_weeks"] == 156
+    assert data["dataset"]["months"] == 36
+    
+    assert "stationarity_adf" in data
+    assert "p_value" in data["stationarity_adf"]
+    assert data["stationarity_adf"]["p_value"] < 0.05
+    
+    assert "model_comparison" in data
+    comparison = data["model_comparison"]
+    assert "sarima_1_1_1_12" in comparison
+    assert comparison["sarima_1_1_1_12"]["rmse"] > 0.0
+    assert comparison["sarima_1_1_1_12"]["mae"] > 0.0
