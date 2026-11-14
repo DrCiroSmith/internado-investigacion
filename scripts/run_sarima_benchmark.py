@@ -20,7 +20,7 @@ from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.stattools import adfuller, acf
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 
-REPO_ROOT = Path("/home/drnemo/projects/portfolio_overhaul/internado-investigacion")
+REPO_ROOT = Path(__file__).resolve().parent.parent
 ASSETS_DIR = REPO_ROOT / "assets"
 REPORTS_DIR = REPO_ROOT / "reports"
 DATA_DIR = REPO_ROOT / "data"
