@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-labelledby="t8 d8">
+  <title id="t8">Air-Gapped Docker Compose Clinical Epidemiology Platform</title>
+  <desc id="d8">Containerized ETL orchestration showing Hospital Registry Intake, Zero-PHI Safe-Harbor Gate, MySQL 8.0, and Python 3.12 Statsmodels.</desc>
+  <style>
+    .bg { fill: #0B111A; }
+    .panel { fill: #131B26; stroke: #233142; stroke-width: 1.2; }
+    .container-box { fill: #1A2536; stroke: #2A3B50; stroke-width: 1.2; }
+    .txt-main { fill: #F1F5F9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .txt-sub { fill: #94A3B8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .txt-mono { fill: #38BDF8; font-family: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .net-wire { stroke: #38BDF8; stroke-width: 2; stroke-dasharray: 6 6; animation: netStream 8s linear infinite; }
+    .health-dot { animation: pulseHealth 2s ease-in-out infinite alternate; }
+
+    @keyframes netStream { to { stroke-dashoffset: -96; } }
+    @keyframes pulseHealth { 0% { opacity: 0.4; } 100% { opacity: 1; } }
+
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #F8FAFC; }
+      .panel { fill: #FFFFFF; stroke: #CBD5E1; }
+      .container-box { fill: #F1F5F9; stroke: #CBD5E1; }
+      .txt-main { fill: #0F172A; }
+      .txt-sub { fill: #475569; }
+      .txt-mono { fill: #0284C7; }
+      .net-wire { stroke: #0284C7; }
+    }
+  </style>
+
+  <rect width="1200" height="420" rx="16" class="bg"/>
+  <rect x="0.5" y="0.5" width="1199" height="419" rx="15.5" fill="none" stroke="#334155" stroke-opacity="0.3"/>
+
+  <!-- Header -->
+  <g transform="translate(50, 24)">
+    <text x="0" y="24" class="txt-main" font-size="18" font-weight="700">AIR-GAPPED DOCKER COMPOSE CLINICAL EPIDEMIOLOGY PLATFORM</text>
+    <text x="0" y="44" class="txt-sub" font-size="12">Isolated Bridge Network · Safe-Harbor De-Identification · MySQL 8.0 Ingestion · Statsmodels Forecasting</text>
+  </g>
+
+  <!-- Network Interconnect Wires -->
+  <g fill="none">
+    <path d="M 280 200 L 330 200" class="net-wire"/>
+    <path d="M 560 200 L 610 200" class="net-wire"/>
+    <path d="M 840 200 L 890 200" class="net-wire"/>
+  </g>
+
+  <!-- 4 Docker Containers -->
+  <!-- Container 1: Raw Intake -->
+  <g transform="translate(50, 100)">
+    <rect width="230" height="200" rx="10" class="container-box"/>
+    <rect x="14" y="14" width="202" height="26" rx="4" fill="#0284C7" fill-opacity="0.15"/>
+    <circle cx="26" cy="27" r="4" fill="#10B981" class="health-dot"/>
+    <text x="36" y="31" fill="#38BDF8" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="700">SERVICE: INTAKE</text>
+    
+    <text x="14" y="66" class="txt-main" font-size="13" font-weight="600">Hospital Registry Intake</text>
+    <text x="14" y="88" class="txt-sub" font-size="11">Raw Surgical Admissions</text>
+    <text x="14" y="112" class="txt-mono" font-size="10" fill="#38BDF8">UTF-8 Normalization</text>
+    <text x="14" y="134" class="txt-sub" font-size="10">Emergency Exodontia Triage</text>
+    <text x="14" y="156" class="txt-sub" font-size="10">156 Consecutive Weeks</text>
+    <text x="14" y="178" class="txt-mono" font-size="9" fill="#10B981">Volume: 12,400+ Records</text>
+  </g>
+
+  <!-- Container 2: Zero-PHI Gate -->
+  <g transform="translate(330, 100)">
+    <rect width="230" height="200" rx="10" class="container-box"/>
+    <rect x="14" y="14" width="202" height="26" rx="4" fill="#10B981" fill-opacity="0.15"/>
+    <circle cx="26" cy="27" r="4" fill="#10B981" class="health-dot"/>
+    <text x="36" y="31" fill="#10B981" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="700">SERVICE: PHI-GATE</text>
+
+    <text x="14" y="66" class="txt-main" font-size="13" font-weight="600">Safe-Harbor Gate</text>
+    <text x="14" y="88" class="txt-sub" font-size="11">HIPAA 18-Identifier Scrub</text>
+    <text x="14" y="112" class="txt-mono" font-size="10" fill="#10B981">Deterministic Salting</text>
+    <text x="14" y="134" class="txt-sub" font-size="10">Zero Cloud Transmission</text>
+    <text x="14" y="156" class="txt-sub" font-size="10">Air-Gapped Bridge Network</text>
+    <text x="14" y="178" class="txt-mono" font-size="9" fill="#10B981">Compliance: Zero Leakage</text>
+  </g>
+
+  <!-- Container 3: MySQL 8.0 Ingestion Engine -->
+  <g transform="translate(610, 100)">
+    <rect width="230" height="200" rx="10" class="container-box"/>
+    <rect x="14" y="14" width="202" height="26" rx="4" fill="#F59E0B" fill-opacity="0.15"/>
+    <circle cx="26" cy="27" r="4" fill="#10B981" class="health-dot"/>
+    <text x="36" y="31" fill="#F59E0B" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="700">SERVICE: MYSQL-DB</text>
+
+    <text x="14" y="66" class="txt-main" font-size="13" font-weight="600">MySQL 8.0 Mart</text>
+    <text x="14" y="88" class="txt-sub" font-size="11">Relational Time-Series</text>
+    <text x="14" y="112" class="txt-mono" font-size="10" fill="#F59E0B">InnoDB Temporal Indices</text>
+    <text x="14" y="134" class="txt-sub" font-size="10">Aggregated Weekly Counts</text>
+    <text x="14" y="156" class="txt-sub" font-size="10">Zero-Loss Foreign Keys</text>
+    <text x="14" y="178" class="txt-mono" font-size="9" fill="#10B981">Integrity: ACID Enforced</text>
+  </g>
+
+  <!-- Container 4: Python 3.12 Statsmodels -->
+  <g transform="translate(890, 100)">
+    <rect width="260" height="200" rx="10" class="container-box"/>
+    <rect x="14" y="14" width="232" height="26" rx="4" fill="#8B5CF6" fill-opacity="0.15"/>
+    <circle cx="26" cy="27" r="4" fill="#10B981" class="health-dot"/>
+    <text x="36" y="31" fill="#8B5CF6" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="700">SERVICE: FORECAST-RUNNER</text>
+
+    <text x="14" y="66" class="txt-main" font-size="13" font-weight="600">Python 3.12 Statsmodels</text>
+    <text x="14" y="88" class="txt-sub" font-size="11">Walk-Forward SARIMA</text>
+    <text x="14" y="112" class="txt-mono" font-size="10" fill="#8B5CF6">AIC/BIC Order Search</text>
+    <text x="14" y="134" class="txt-sub" font-size="10">26-Week Holdout Projection</text>
+    <text x="14" y="156" class="txt-sub" font-size="10">95% Confidence Intervals</text>
+    <text x="14" y="178" class="txt-mono" font-size="9" fill="#10B981">Holdout MAPE: 17.7%</text>
+  </g>
+
+  <!-- Footer Banner -->
+  <g transform="translate(50, 325)">
+    <rect width="1100" height="55" rx="8" class="panel"/>
+    <circle cx="28" cy="27" r="5" fill="#10B981"/>
+    <text x="46" y="24" class="txt-main" font-size="12" font-weight="600">Deterministic Multi-Container Isolation</text>
+    <text x="46" y="42" class="txt-sub" font-size="11">Every container runs in non-root user mode with internal bridge networking (172.28.0.0/16) and zero outbound internet egress.</text>
+  </g>
+</svg>

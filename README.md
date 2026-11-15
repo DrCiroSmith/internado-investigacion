@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero.svg" alt="Clinical Research ETL & SARIMA Forecasting Platform Banner" width="100%">
+  <img src="assets/sarima_forecast_hero.svg" alt="Clinical Research ETL & SARIMA Forecasting Platform Banner" width="100%">
 </p>
 
 <p align="center">
@@ -32,6 +32,10 @@ This platform establishes a reproducible environment to:
 ---
 
 ## 2. Platform Architecture
+
+<p align="center">
+  <img src="assets/container_etl_flow.svg" alt="Air-Gapped Docker Compose Clinical Epidemiology Platform" width="100%">
+</p>
 
 ```mermaid
 flowchart TD
